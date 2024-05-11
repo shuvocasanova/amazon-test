@@ -94,17 +94,26 @@ app.get('/product', authenticateToken, async (req, res) => {
                 title = $('#productTitle').text().trim();
                 price = $('#corePrice_feature_div > div > div > span.a-price.aok-align-center > span.a-offscreen').text().trim();
                 image = $('#landingImage').attr('src');
+                details = $('#feature-bullets').text().trim();
                 break;
             case 'amazon.ca':
                 title = $('#productTitle').text().trim();
-                price = $('#corePriceDisplay_desktop_feature_div > div.a-section.a-spacing-none.aok-align-center.aok-relative > span.a-price.aok-align-center.reinventPricePriceToPayMargin.priceToPay > span:nth-child(2)').text().trim();
+                price = $('#corePrice_feature_div > div > div > span.a-price.aok-align-center > span.a-offscreen').text().trim();
                 image = $('#landingImage').attr('src');
+                details = $('#feature-bullets').text().trim();
                 break;
             case 'amazon.es':
                 title = $('#productTitle').text().trim();
                 price = $('#corePrice_feature_div > div > div > span.a-price.aok-align-center > span.a-offscreen').text().trim();
                 image = $('#landingImage').attr('src');
+                details = $('#feature-bullets').text().trim();
                 break;
+            case 'adidas.com':
+            title = $('#main-content > div.sidebar-wrapper___3uF26 > div.sidebar___29cCJ > div.product-description___1TLpA > h1 > span').text().trim();
+            price = $('#main-content > div.sidebar-wrapper___3uF26 > div.sidebar___29cCJ > div.product-description___1TLpA > div.product-price___2Mip5.gl-vspace > div > div > div > div').text().trim();
+            image = $('#pdp-gallery-desktop-grid-container > div:nth-child(1) > div > div > div > picture > img').attr('src');
+                details = $('#navigation-target-description > div > div > div > div > div.text-content___13aRm > p').text().trim();
+            break;
             // Add cases for other e-commerce websites as needed
             default:
                 console.error('Unsupported website:', domain);
