@@ -97,7 +97,7 @@ app.get('/product', authenticateToken, async (req, res) => {
                 break;
             case 'amazon.ca':
                 title = $('#productTitle').text().trim();
-                price = $('#corePrice_feature_div > div > div > span.a-price.aok-align-center > span.a-offscreen').text().trim();
+                price = $('#corePriceDisplay_desktop_feature_div > div.a-section.a-spacing-none.aok-align-center.aok-relative > span.a-price.aok-align-center.reinventPricePriceToPayMargin.priceToPay > span:nth-child(2)').text().trim();
                 image = $('#landingImage').attr('src');
                 break;
             case 'amazon.es':
