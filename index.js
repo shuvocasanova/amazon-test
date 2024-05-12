@@ -109,9 +109,9 @@ app.get('/product', authenticateToken, async (req, res) => {
                 details = $('#feature-bullets').text().trim();
                 break;
             case 'adidas.com':
-            title = $('#main-content > div.sidebar-wrapper___3uF26 > div.sidebar___29cCJ > div.product-description___1TLpA > h1 > span').text().trim();
-            price = $('#main-content > div.sidebar-wrapper___3uF26 > div.sidebar___29cCJ > div.product-description___1TLpA > div.product-price___2Mip5.gl-vspace > div > div > div > div').text().trim();
-            image = $('#pdp-gallery-desktop-grid-container > div:nth-child(1) > div > div > div > picture > img').attr('src');
+                title = $('#main-content > div.sidebar-wrapper___3uF26 > div.sidebar___29cCJ > div.product-description___1TLpA > h1 > span').text().trim();
+                price = $('#main-content > div.sidebar-wrapper___3uF26 > div.sidebar___29cCJ > div.product-description___1TLpA > div.product-price___2Mip5.gl-vspace > div > div > div > div').text().trim();
+                image = $('#pdp-gallery-desktop-grid-container > div:nth-child(1) > div > div > div > picture > img').attr('src');
                 details = $('#navigation-target-description > div > div > div > div > div.text-content___13aRm > p').text().trim();
             break;
             // Add cases for other e-commerce websites as needed
